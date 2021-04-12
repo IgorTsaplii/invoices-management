@@ -1,0 +1,167 @@
+@import "_reset";
+@import "_add-invoice";
+@import "_edit-invoice";
+@import "_remove-invoice";
+
+body {
+  background: #f1f3f6;
+  padding: 16px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  > div {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+section,
+form {
+  margin-top: 20px;
+  border: 1px solid #e4e6e9;
+  padding: 20px 16px;
+  background: #fff;
+
+  h2 {
+    font-size: 16px;
+    color: #424342;
+    font-weight: 600;
+  }
+}
+
+h1 {
+  border-left: 4px solid #e4e6e9;
+  color: #7e869b;
+  font-size: 24px;
+  padding: 8px 10px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 60%;
+    height: 3px;
+    background: #e4e6e9;
+  }
+}
+
+.action_bar,
+#add_invoice_block,
+#edit_invoice_block,
+#remove_invoice_block {
+  button {
+    color: #fff;
+    border: none;
+    background: #4973ff;
+    padding: 12px 32px;
+    border-radius: 6px;
+    margin: 8px 8px 0 0;
+    cursor: pointer;
+
+    &:hover {
+      background: #1445e3;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+#invoice_list {
+  ul {
+    font-size: 0;
+  }
+  li {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 8px 8px;
+    vertical-align: top;
+    overflow: hidden;
+  }
+}
+.invoice_list_header {
+  background: #f1f3f6;
+  margin-top: 8px;
+  color: #7e869b;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.invoice_list_item {
+  border-bottom: 1px solid #e4e6e9;
+  color: #979797;
+}
+
+.edit_buttons_block {
+  .edit_button,
+  .remove_button {
+    background: none;
+    display: inline-block;
+    color: #7e869b;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 20px;
+    font-size: 16px;
+    border-bottom: 2px solid #7e869b;
+  }
+}
+
+@media (min-width: 576px) {
+  #invoice_list {
+    li {
+      width: 50%;
+      font-size: 16px;
+      padding: 20px 16px;
+    }
+  }
+
+  h1 {
+    &:after {
+      width: 76%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  section,
+  form {
+    margin-top: 28px;
+  }
+
+  body {
+    padding: 24px;
+  }
+
+  #invoice_list {
+    li {
+      width: 25%;
+    }
+  }
+
+  h1 {
+    &:after {
+      width: 84%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    &:after {
+      width: 88%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    &:after {
+      width: 90%;
+    }
+  }
+}

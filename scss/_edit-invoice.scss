@@ -1,0 +1,42 @@
+#edit_invoice_block {
+  display: none;
+  h1:after {
+    width: 48%;
+  }
+}
+
+#edit_invoice_block form #edit_comment_input_block {
+  width: calc(100% - 32px);
+}
+
+@media (min-width: 576px) {
+  #edit_invoice_block {
+    h1:after {
+      width: 72%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #edit_invoice_block {
+    h1:after {
+      width: 78%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #edit_invoice_block {
+    h1:after {
+      width: 84%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #edit_invoice_block {
+    h1:after {
+      width: 87%;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Invoices</title>
+</head>
+<body>
+  <div id="invoices_main_view">
+    <h1>Invoices</h1> 
+    <section class="action_bar">
+      <h2>Actions</h2>
+      <button id="add_new_button">Add new</button>
+    </section>
+    <section id='invoice_list'>
+      <h2>Invoices</h2>
+      <ul class='invoice_list_header'>
+        <li>Create</li>
+        <li>No</li>
+        <li>Supply</li>
+        <li>Comment</li>
+      </ul>
+    </section>
+  </div>  
+  <div id="add_invoice_block">
+    <h1>Create Invoice</h1>
+    <section id="form_section">
+      <form action="">
+        <label for="number_input" id="number_input_block"> Number :
+          <input type="number" id="number_input" placeholder="Enter the number">
+        </label>
+        <label for="invoice_date_input"> Invoice Date :
+          <input type="date" id="invoice_date_input" placeholder="Select date">
+        </label>
+        <label for="suplly_date_input"> Suplly Date :
+          <input type="date" id="suplly_date_input" placeholder="Select date"><!--настроить placeholder--> 
+        </label>
+        <label for="comment_input" id="comment_input_block"> Comment :
+          <textarea name="comment" id="comment_input"></textarea>
+        </label>
+        <button id="close_add_invoice_block_button"></button>
+      </form> 
+      <button id="save_new_ivoice_button">Save</button>
+    </section>
+  </div>
+  <div id="edit_invoice_block">
+    <h1>Edit Invoice</h1>
+    <section id="edit_form_section">
+      <form action="">
+        <label for="edit_number_input" id="edit_number_input_block"> Number :
+          <input type="number" id="edit_number_input" placeholder="Enter the number">
+        </label>
+        <label for="edit_invoice_date_input"> Invoice Date :
+          <input type="date" id="edit_invoice_date_input" placeholder="Select date">
+        </label>
+        <label for="edit_suplly_date_input"> Suplly Date :
+          <input type="date" id="edit_suplly_date_input" placeholder="Select date"><!--настроить placeholder--> 
+        </label>
+        <label for="edit_comment_input" id="edit_comment_input_block"> Comment :
+          <textarea name="comment" id="edit_comment_input"></textarea>
+        </label>
+        <button id="close_edit_invoice_block_button"></button>
+      </form> 
+      <button id="save_edit_ivoice_button">Save</button>
+    </section>
+  </div>
+  <div id="remove_invoice_block">
+    <section>
+      <p id="remove_message"></p>
+      <button id="confirm_button">Yes</button>
+      <button id="reject_button">No</button>
+    </section>
+  </div>
+  <script src="src/get-invoice.js"></script>
+  <script src="src/add-invoice.js"></script>
+  <script src="src/edit-invoice.js"></script>
+  <script src="src/remove-invoice.js"></script> 
+</body>
+</html>

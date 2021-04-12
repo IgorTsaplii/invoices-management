@@ -1,0 +1,127 @@
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 4px 8px;
+  min-height: 20px;
+  cursor: pointer;
+}
+
+#add_invoice_block,
+#edit_invoice_block {
+  display: none;
+
+  h1:after {
+    width: 36%;
+  }
+
+  section {
+    position: relative;
+  }
+
+  form {
+    font-size: 0;
+    margin-top: 0;
+    margin-bottom: 80px;
+    position: relative;
+
+    label {
+      font-size: 16px;
+      color: #424342;
+      font-weight: 600;
+      padding-top: 16px;
+      display: inline-block;
+      width: calc(100% - 32px);
+    }
+
+    #comment_input_block {
+      width: calc(100% - 32px);
+    }
+  }
+  #close_add_invoice_block_button,
+  #close_edit_invoice_block_button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: none;
+    padding: 0;
+    margin: 0;
+
+    &:before,
+    &:after {
+      content: "";
+      width: 34px;
+      height: 4px;
+      position: absolute;
+      transform: rotate(45deg);
+      background: #e4e6e9;
+      top: 12px;
+      left: -3px;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  #save_new_ivoice_button,
+  #save_edit_ivoice_button {
+    display: block;
+    position: absolute;
+    right: 16px;
+    bottom: 20px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  #add_invoice_block {
+    h1:after {
+      width: 64%;
+    }
+  }
+
+  #add_invoice_block form label,
+  #edit_invoice_block form label {
+    width: 45%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  #add_invoice_block {
+    h1:after {
+      width: 72%;
+    }
+  }
+  #add_invoice_block form label,
+  #edit_invoice_block form label {
+    padding-top: 40px;
+  }
+
+  input,
+  textarea {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  #add_invoice_block {
+    h1:after {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #add_invoice_block {
+    h1:after {
+      width: 84%;
+    }
+  }
+}

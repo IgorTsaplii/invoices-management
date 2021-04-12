@@ -1,0 +1,24 @@
+#remove_invoice_block {
+  display: none;
+
+  #rejectButton {
+    margin-right: 0;
+  }
+
+  section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    padding: 50px;
+    text-align: center;
+
+    button {
+      width: 50px;
+      text-align: center;
+      padding: 12px 0;
+      margin-top: 20px;
+    }
+  }
+}
